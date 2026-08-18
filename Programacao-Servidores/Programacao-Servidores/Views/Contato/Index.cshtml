@@ -15,9 +15,10 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var contato in Model.Lista)
+            @foreach (var contato in Model.Lista.OrderBy(x => x.Nome))
             {
                 <tr>
+                   <td>@contato.Id</td>
                    <td>@contato.Nome</td>
                    <td>@contato.Celular</td>
                    <td>@contato.Email</td>
